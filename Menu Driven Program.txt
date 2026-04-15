@@ -1,0 +1,28 @@
+ Menu Driven Program
+while True:
+    print("\n1. Even/Odd")
+    print("2. Positive/Negative")
+    print("3. Exit")
+
+    choice = int(input("Enter choice: "))
+
+    if choice == 1:
+        n = int(input("Enter number: "))
+        if n % 2 == 0:
+            print("Even")
+        else:
+            print("Odd")
+
+    elif choice == 2:
+        n = int(input("Enter number: "))
+        if n >= 0:
+            print("Positive")
+        else:
+            print("Negative")
+
+    elif choice == 3:
+        print("Exiting...")
+        break
+
+    else:
+        print("Invalid choice")

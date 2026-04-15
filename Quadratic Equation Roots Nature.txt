@@ -1,0 +1,13 @@
+Quadratic Equation Roots Nature
+a = float(input())
+b = float(input())
+c = float(input())
+
+D = b**2 - 4*a*c
+
+if D > 0:
+    print("Real and Distinct")
+elif D == 0:
+    print("Real and Equal")
+else:
+    print("Imaginary")

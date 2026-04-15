@@ -1,0 +1,12 @@
+ATM Withdrawal System
+balance = float(input("Enter balance: "))
+amount = float(input("Enter withdrawal amount: "))
+
+if amount % 100 != 0:
+    print("Transaction Failed")
+elif amount > balance:
+    print("Transaction Failed")
+elif balance - amount < 500:
+    print("Transaction Failed")
+else:
+    print("Transaction Successful")
