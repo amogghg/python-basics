@@ -1,0 +1,54 @@
+# Train Seat Reservation System
+
+seats = [0] * 20
+
+while True:
+    print("\n1.Book Seat")
+    print("2.Cancel Seat")
+    print("3.Show Seats")
+    print("4.Booking Percentage")
+    print("5.Exit")
+
+    choice = int(input("Enter choice: "))
+
+    if choice == 1:
+        seat_no = int(input("Enter seat number (1-20): "))
+
+        if seats[seat_no - 1] == 0:
+            seats[seat_no - 1] = 1
+            print("Seat booked successfully")
+        else:
+            print("Seat already booked")
+
+    elif choice == 2:
+        seat_no = int(input("Enter seat number to cancel: "))
+
+        if seats[seat_no - 1] == 1:
+            seats[seat_no - 1] = 0
+            print("Booking cancelled")
+        else:
+            print("Seat already available")
+
+    elif choice == 3:
+        print("\nSeat Status:")
+        for i in range(20):
+            print("Seat", i + 1, ":", seats[i])
+
+    elif choice == 4:
+        booked = seats.count(1)
+        percentage = (booked / 20) * 100
+        print("Booking Percentage =", percentage, "%")
+
+    elif choice == 5:
+        break
+
+    else:
+        print("Invalid choice")
+
+
+
+
+output
+Enter choice: 1
+Enter seat number (1-20): 2
+Seat booked successfully
